@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mjh-sms-bot
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn bot:app
+    envVars:
+      - key: BOT_TOKEN
+        value: 7899139063:AAHS0UDdzyqmwc15nRdGriy0dqBwk5PFw2Y
+      - key: ADMIN_ID
+        value: 6535058176
+    plan: free
